@@ -34,9 +34,9 @@ Peguei o banco de dados em formato de string e foi corrigido  todos os erros de 
 
 Transformei em json novamente para fazer um forEach e peguei a quantidade pela data e verifiquei se não possuía esse elemento no objeto e então eu coloquei  novamente a quantity corrigindo o problema de ter sumido as quantidades.
 
-`var jsonObject = JSON.parse(stringified);
+`var jsonObject = JSON.parse(stringified);`
  
-jsonObject.forEach(function (data, index) {
+`jsonObject.forEach(function (data, index) {
  if (!data.quantity) {
    jsonObject[index].quantity = 0;
  }
@@ -69,9 +69,8 @@ Logo depois eu ordenei cada um dos elementos baseado no index mapeando o json
 
 `const indexedJson = jsonObject.map((item, index) =>
  Object.assign(item, { index })
-);
+);`
  
-`
 Terminando assim a Questão 2 a) exportando o banco de dados ordenado em ordem alfabética e numerado com seu index criando o arquivo saida.json
 
 `function ImprimirProdutos() {
